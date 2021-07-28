@@ -19,3 +19,10 @@ dict = {123: 'abc', 456: 'def'};
 set = new Set([1,23,56]);
 
 
+let d: unknown[];
+d = [1, 'a', true, ['even', 'another', 'array']];
+
+// eslint is against any over unknown
+let d2: any[];
+
+
