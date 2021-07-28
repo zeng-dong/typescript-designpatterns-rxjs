@@ -25,5 +25,7 @@ d = [1, 'a', true, ['even', 'another', 'array']];
 // eslint is against any over unknown
 let d2: any[];
 
-// test
-
+// dict
+let a : { [key: number]: string};
+a = {123: 'abc', 456: 'bcd'};
+let b = a[123];
