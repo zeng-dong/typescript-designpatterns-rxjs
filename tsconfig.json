@@ -5,9 +5,16 @@
         "module": "CommonJS",
         "outDir": "./dist",
         "rootDir": "./",
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "removeComments": true
     },
     "include": [
         "src/**/*.ts"
-    ]
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "watchOptions": {
+        "excludeDirectories": ["**/node_modules", "dist"]
+    }
 }
