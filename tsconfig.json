@@ -3,11 +3,11 @@
         "strict": true,
         "target": "ES2015",
         "module": "CommonJS",
-        "outDir": "../dist",
+        "outDir": "./dist",
         "rootDir": "./",
         "moduleResolution": "node"
     },
     "include": [
-        "**/*.ts"
+        "src/**/*.ts"
     ]
 }
