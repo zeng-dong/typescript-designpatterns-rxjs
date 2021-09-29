@@ -29,3 +29,8 @@ let d2: any[];
 let a : { [key: number]: string};
 a = {123: 'abc', 456: 'bcd'};
 let b = a[123];
+
+let x = 1;
+let y = 2;
+let sum = x + y;
+console.log(`sum is ${sum}`);
