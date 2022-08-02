@@ -3,16 +3,20 @@
 	"compilerOptions": {
 		"strict": true,
 		"target": "ES2017",
-		"module": "CommonJS",
+		"module": "ESNext",
 		"outDir": "./dist",
 		"rootDir": "./",
 		"moduleResolution": "node",
 		"removeComments": true
-		// "esModuleInterop": true // I added type: module in package.json, and I still want to use ts-node. actually does not work
+
+		//"esModuleInterop": true // I added type: module in package.json, and I still want to use ts-node. actually does not work
 	},
 	"include": ["src/**/*.ts"],
 	"exclude": ["node_modules"],
 	"watchOptions": {
 		"excludeDirectories": ["**/node_modules", "dist"]
+	},
+	"ts-node": {
+		"esm": true
 	}
 }

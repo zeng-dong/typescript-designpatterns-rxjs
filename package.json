@@ -2,7 +2,7 @@
 	"name": "typescript-designpatterns-rxjs",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
+	"main": "module",
 	"scripts": {
 		"test": "jest",
 		"build": "tsc",
@@ -18,7 +18,7 @@
 			[
 				"@babel/preset-env",
 				{
-					"target": {
+					"targets": {
 						"node": "current"
 					}
 				}
