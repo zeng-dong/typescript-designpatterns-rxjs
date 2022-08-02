@@ -4,6 +4,7 @@
 		"strict": true,
 		"target": "ES2017",
 		"module": "ESNext",
+		/* change module: commonjs to ESNext, and in package.json add 'type': 'module' */
 		"outDir": "./dist",
 		"rootDir": "./",
 		"moduleResolution": "node",

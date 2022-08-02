@@ -1,10 +1,8 @@
-import { SomeClass } from "./testable-class";
+import { doSomething } from "./testable-function";
 
 describe("A unit test", () => {
 	it("called, no params, returns true", () => {
-		const sut = new SomeClass();
-
-		const result = sut.invoke();
+		const result = doSomething();
 
 		expect(result).toBe(true);
 	});
