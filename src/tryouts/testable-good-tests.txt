@@ -1,0 +1,18 @@
+Test the what not the how
+Are not tied to a specific implementation, they assert on the coutcomes of a function
+Do not require huge amounts of state to function
+Are clear and legible, requiring a minimum amount of 'head compilation'
+Only test one thing
+Only assert on the dimensions of one thing
+Are as clear, if not clearer, than other production code
+
+
+typed parameters
+defining functions
+return values
+async / await
+optional parameters
+arrow functions
+default parameters
+rest parameters
+parameter destructuring
