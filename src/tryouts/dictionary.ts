@@ -50,3 +50,12 @@ let tsMapScores = new Map<string, number>();
 tsMapScores.set("bill", 10);
 tsMapScores.set("pay", 20);
 console.log(tsMapScores);
+
+console.log("use a union type for the keys and an object type for  the values");
+let unionKeyMapScores = new Map<"bill" | "pay", Person>();
+unionKeyMapScores.set("bill", {
+	email: "aaa",
+	rating: 0,
+});
+
+/// besides set(), can use forEach on map
