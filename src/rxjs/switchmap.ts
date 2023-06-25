@@ -1,12 +1,12 @@
-import { interval, map, switchMap } from "rxjs";
+import { interval, map, of, switchMap } from "rxjs";
 
-var observable1 = interval(6000);
-var observable2 = interval(2000);
+var users$ = of("John", "Mike", "Bob", "Jane", "Kate");
+var ratins$ = interval(2000); //of(1, 2, 3, 4, 5);
 
-observable1.subscribe((ob1Val) => {
-	console.log("observable1:", ob1Val);
-	observable2.subscribe((ob2Val) => {
-		console.log("observable2:", ob1Val, ob2Val);
+users$.subscribe((user) => {
+	console.log("user:", user);
+	ratins$.subscribe((rating) => {
+		console.log("rating:", user, rating);
 	});
 });
 
@@ -18,13 +18,13 @@ and all these subsciptions of "observable2" are running in parallel to each othe
 
 // to avoid such a situation we should use appropriate RxJS operator instead of nested subscriptions.
 // The operator to go for in our current situation is the switchMap operator
-// observable1
+// users$
 // 	.pipe(
-// 		switchMap((ob1Val) => {
-// 			console.log("observable1:", ob1Val);
-// 			return observable2.pipe(map((ob2Val) => [ob1Val, ob2Val]));
+// 		switchMap((user) => {
+// 			console.log("user:", user);
+// 			return ratins$.pipe(map((rating) => [user, rating]));
 // 		})
 // 	)
 // 	.subscribe((mappedVal) => {
-// 		console.log("observable2:", mappedVal[0], mappedVal[1]);
+// 		console.log("rating:", mappedVal[0], mappedVal[1]);
 // 	});
